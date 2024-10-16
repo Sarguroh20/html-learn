@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            background-color: #414141;
+            color: #fff;
+        }
+    </style>
+</head>
+
+<body>
+    <img src="https://images.pexels.com/photos/4652004/pexels-photo-4652004.jpeg" width="400px" alt="No Image">
+
+    <!-- Image upload from local resource -->
+    <!-- Aboslute & Relative Path (./ - refers to current folder ./../ - refers to one folder back) -->
+    <!-- Rename img name if it contains spaces because it create problem when taken to the server ex: example img -> example-img/example_img/exampleImg -->
+
+    <img src="./hourglas.jpg" width="300px" alt="No Image">
+
+    <picture>
+        <source media="(min-width: 650px)" srcset="./hourglass0.jpg" />
+        <source media="(min-width: 460px)" srcset="./hourglass1.jpg" />
+        <img src="./hourglass2.jpg" alt="">
+    </picture>
+
+    <!-- An image map generator -->
+    <img src="https://images.pexels.com/photos/3185493/pexels-photo-3185493.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=1260&amp;h=750&amp;dpr=1"
+        usemap="#image-map">
+
+    <map name="image-map">
+        <area onclick="one()" target="" alt="" title="" href="" coords="63,244,124,312" shape="rect">
+        <area onclick="two()" target="" alt="" title="" href="" coords="420,399,22" shape="circle">
+        <area onclick="one()" target="" alt="" title="" href="" coords="27,406,66,454" shape="rect">
+    </map>
+
+    <script>
+        function one() {
+            alert("You clicked on one")
+        }
+        function two() {
+            alert("You clicked on two")
+        }
+    </script>
+</body>
+
+</html>
